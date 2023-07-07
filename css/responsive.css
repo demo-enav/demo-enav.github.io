@@ -1482,6 +1482,7 @@
     .event-counter .counter-box .number { font-size: 40px; line-height: 45px; }
 
     .img-responsive { transform: rotate(0) !important;}
+    #content-section44 .dp-flex { display: grid !important;}
 }
 
 @media (max-width: 835px) {
