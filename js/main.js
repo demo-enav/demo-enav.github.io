@@ -103,33 +103,33 @@ $(document).ready(function () {
          navigationText: ['<i class="fa fa-long-arrow-left"></i>', '<i class="fa fa-long-arrow-right"></i>']
     });
 
-    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-    });
+    // $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    //     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false
+    // });
 
     //set equalize height
-    $('.equalize').equalize();
+    // $('.equalize').equalize();
 
-    //fit videos
-    $(".fit-videos").fitVids();
+    // //fit videos
+    // $(".fit-videos").fitVids();
 
     /* ===================================
      counter number reset while scrolling
      ====================================== */
-    $('.timer').removeClass('appear');
-    $('.timer').appear();
-    $(document.body).on('appear', '.timer', function (e) {
-        // this code is executed for each appeared element
-        if (!$(this).hasClass('appear')) {
-            animatecounters();
-            $(this).addClass('appear');
-        }
-    });
+    // $('.timer').removeClass('appear');
+    // $('.timer').appear();
+    // $(document.body).on('appear', '.timer', function (e) {
+    //     // this code is executed for each appeared element
+    //     if (!$(this).hasClass('appear')) {
+    //         animatecounters();
+    //         $(this).addClass('appear');
+    //     }
+    // });
 
     /* ===================================
      Tab Active After Export
@@ -164,51 +164,51 @@ $(document).ready(function () {
      masonry
      ====================================== */
 
-    $blog = $('.masonry-items');
-    $blog.imagesLoaded(function () {
-        $blog.isotope({
-            itemSelector: 'li',
-            layoutMode: 'masonry'
-        });
-    });
+    // $blog = $('.masonry-items');
+    // $blog.imagesLoaded(function () {
+    //     $blog.isotope({
+    //         itemSelector: 'li',
+    //         layoutMode: 'masonry'
+    //     });
+    // });
 
     /*==============================================================*/
     //Lightbox gallery - START CODE
     /*==============================================================*/
     
-     $('.lightbox-gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        closeOnContentClick: true,
-        closeBtnInside: false,
-        midClick: true,
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-fade',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-        },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-            titleSrc: function (item) {
-                return item.el.attr('title');
-            }
-        },
-        callbacks: {
-                open: function () {
-                    $.magnificPopup.instance.close = function() {
-                        if (!isMobile){
-                            $.magnificPopup.proto.close.call(this);
-                        } else {
-                            $(document).on('click', 'button.mfp-close', function (event) {                               
-                                $.magnificPopup.proto.close.call(this);
-                            });
-                        }
-                    }
-                }
-            }
-    });
+    //  $('.lightbox-gallery').magnificPopup({
+    //     delegate: 'a',
+    //     type: 'image',
+    //     closeOnContentClick: true,
+    //     closeBtnInside: false,
+    //     midClick: true,
+    //     tLoading: 'Loading image #%curr%...',
+    //     mainClass: 'mfp-fade',
+    //     gallery: {
+    //         enabled: true,
+    //         navigateByImgClick: true,
+    //         preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+    //     },
+    //     image: {
+    //         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+    //         titleSrc: function (item) {
+    //             return item.el.attr('title');
+    //         }
+    //     },
+    //     callbacks: {
+    //             open: function () {
+    //                 $.magnificPopup.instance.close = function() {
+    //                     if (!isMobile){
+    //                         $.magnificPopup.proto.close.call(this);
+    //                     } else {
+    //                         $(document).on('click', 'button.mfp-close', function (event) {                               
+    //                             $.magnificPopup.proto.close.call(this);
+    //                         });
+    //                     }
+    //                 }
+    //             }
+    //         }
+    // });
 
      /*==============================================================
      smooth scroll With Shrink Navigation
@@ -271,13 +271,13 @@ $(document).ready(function () {
     /* ===================================
      shrink navigation Active
      ====================================== */
-    $('.navigation-menu').onePageNav({
-        scrollSpeed: 750,
-        scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
-        scrollOffset: 79, //Height of Navigation Bar
-        currentClass: 'active',
-        filter: ':not(.btn-very-small)'
-    });
+    // $('.navigation-menu').onePageNav({
+    //     scrollSpeed: 750,
+    //     scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
+    //     scrollOffset: 79, //Height of Navigation Bar
+    //     currentClass: 'active',
+    //     filter: ':not(.btn-very-small)'
+    // });
     /*===========================================================
      Contact Form 
      ============================================================ */
@@ -607,59 +607,59 @@ setTimeout(function () {
  portfolio-filter
  ==============================================================*/
 
-$portfolio_filter = $('.grid');
-$portfolio_filter.imagesLoaded(function () {
-    $portfolio_filter.isotope({
-        itemSelector: 'li',
-        layoutMode: 'masonry'
-    });
-});
+// $portfolio_filter = $('.grid');
+// $portfolio_filter.imagesLoaded(function () {
+//     $portfolio_filter.isotope({
+//         itemSelector: 'li',
+//         layoutMode: 'masonry'
+//     });
+// });
 
-$grid_selectors = $('.portfolio-filter > li > a');
-$grid_selectors.on('click', function ()
-{
-    $portfolio_filter = $('.grid');
-    $('.portfolio-filter > li').removeClass('active');
-    $(this).parent().addClass('active');
+// $grid_selectors = $('.portfolio-filter > li > a');
+// $grid_selectors.on('click', function ()
+// {
+//     $portfolio_filter = $('.grid');
+//     $('.portfolio-filter > li').removeClass('active');
+//     $(this).parent().addClass('active');
 
-    var selector = $(this).attr('data-filter');
-    $portfolio_filter.imagesLoaded(function () {
-        $portfolio_filter.isotope({
-            filter: selector,
-            itemSelector: 'li',
-            layoutMode: 'masonry'
+//     var selector = $(this).attr('data-filter');
+//     $portfolio_filter.imagesLoaded(function () {
+//         $portfolio_filter.isotope({
+//             filter: selector,
+//             itemSelector: 'li',
+//             layoutMode: 'masonry'
 
-        });
-    });
-    return false;
-});
+//         });
+//     });
+//     return false;
+// });
 
-$(window).resize(function () {
-    setTimeout(function () {
-        $portfolio_filter.isotope('layout');
-        //set equalize height
-        if (!isMobile.any()) {
-            $(window).unbind('equalize');
-            //$('.equalize > div').css('height', '');
-            $('.equalize').equalize();
-        }
-    }, 500);
-});
+// $(window).resize(function () {
+//     setTimeout(function () {
+//         $portfolio_filter.isotope('layout');
+//         //set equalize height
+//         if (!isMobile.any()) {
+//             $(window).unbind('equalize');
+//             //$('.equalize > div').css('height', '');
+//             $('.equalize').equalize();
+//         }
+//     }, 500);
+// });
 
-$(window).on("orientationchange", function () {
-    if (isMobile.any()) {
-        $(window).unbind('equalize');
-        //$('.equalize > div').css('height', '');
-        setTimeout(function () {
-            $('.equalize').equalize();
-        }, 500);
-    }
-});
+// $(window).on("orientationchange", function () {
+//     if (isMobile.any()) {
+//         $(window).unbind('equalize');
+//         //$('.equalize > div').css('height', '');
+//         setTimeout(function () {
+//             $('.equalize').equalize();
+//         }, 500);
+//     }
+// });
 
-$(window).load(function () {
-    //set equalize height
-    $('.equalize').equalize();
-});
+// $(window).load(function () {
+//     //set equalize height
+//     $('.equalize').equalize();
+// });
 
 /*==============================================================
  accordion
@@ -680,9 +680,9 @@ $('.accordion-style1 .collapse').on('hide.bs.collapse', function () {
  countdown timer
  ==============================================================*/
 
-$('#counter-event').countdown($('#counter-event').attr("data-enddate")).on('update.countdown', function (event) {
-    var $this = $(this).html(event.strftime('' + '<div class="counter-container"><div class="counter-box first"><div class="number">%-D</div><span>Day%!d</span></div>' + '<div class="counter-box"><div class="number">%H</div><span>Hours</span></div>' + '<div class="counter-box"><div class="number">%M</div><span>Minutes</span></div>' + '<div class="counter-box last"><div class="number">%S</div><span>Seconds</span></div></div>'))
-});
+// $('#counter-event').countdown($('#counter-event').attr("data-enddate")).on('update.countdown', function (event) {
+//     var $this = $(this).html(event.strftime('' + '<div class="counter-container"><div class="counter-box first"><div class="number">%-D</div><span>Day%!d</span></div>' + '<div class="counter-box"><div class="number">%H</div><span>Hours</span></div>' + '<div class="counter-box"><div class="number">%M</div><span>Minutes</span></div>' + '<div class="counter-box last"><div class="number">%S</div><span>Seconds</span></div></div>'))
+// });
 
 /*==============================================================
  counter
@@ -753,11 +753,11 @@ if( $('#twitter-feed').length )
  wow animation - on scroll
  ==============================================================*/
 
-var wow = new WOW({
-    boxClass: 'wow',
-    animateClass: 'animated',
-    offset: 90,
-    mobile: false,
-    live: true
-});
-wow.init();
+// var wow = new WOW({
+//     boxClass: 'wow',
+//     animateClass: 'animated',
+//     offset: 90,
+//     mobile: false,
+//     live: true
+// });
+// wow.init();

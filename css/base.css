@@ -30,8 +30,8 @@ Table of contents
     Google Font
 ====================================== */
 
-@import url('../../../../../css');
-@import url('../../../../../css-1');
+@import url('css');
+/* @import url('css-1'); */
 
 /* ===================================
     Reset
